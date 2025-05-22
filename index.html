@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fresh Cuts Barbershop</title>
+  
+  <style>
+    /* --- CSS Styling --- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background-color: #333;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 50px 20px;
+      background-image: url('https://images.unsplash.com/photo-1604147706285-18be8274e0df');
+      background-size: cover;
+      background-position: center;
+      color: white;
+    }
+
+    .hero h2 {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 25px;
+      background-color: #4CAF50;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 18px;
+    }
+
+    section {
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .services {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .service-card {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      width: 250px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .service-card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+
+    .service-card h3 {
+      margin-top: 10px;
+      font-size: 20px;
+    }
+
+    .service-card p {
+      font-size: 16px;
+      margin-top: 5px;
+    }
+
+    .payment button {
+      margin-top: 20px;
+      padding: 12px 25px;
+      font-size: 18px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .contact form {
+      max-width: 400px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .contact form input, .contact form textarea {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .contact form button {
+      padding: 12px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    footer {
+      margin-top: 50px;
+      padding: 20px;
+      background: #333;
+      color: white;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- --- Header --- -->
+  <header>
+    <h1>Fresh Cuts Barbershop</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- --- Hero Section (Home) --- -->
+  <section id="home" class="hero">
+    <h2>Look Sharp. Feel Sharp.</h2>
+    <p>Your style, our passion.</p>
+    <a class="btn" href="#services">View Services</a>
+  </section>
+
+  <!-- --- Services Section --- -->
+  <section id="services">
+    <h2>Our Services</h2>
+    <div class="services">
+      <div class="service-card">
+        <img src="https://images.unsplash.com/photo-1598257006405-0c9c9ab2ad5c" alt="Men's Haircut">
+        <h3>Men's Haircut</h3>
+        <p>$20</p>
+      </div>
+      <div class="service-card">
+        <img src="https://images.unsplash.com/photo-1603934653246-181b8c1483c9" alt="Women's Haircut">
+        <h3>Women's Haircut</h3>
+        <p>$25</p>
+      </div>
+      <div class="service-card">
+        <img src="https://images.unsplash.com/photo-1602267746705-55b7c1efb869" alt="Beard Trim">
+        <h3>Beard Trim</h3>
+        <p>$10</p>
+      </div>
+    </div>
+
+    <div class="payment">
+      <h2>Pay for Your Service</h2>
+      <button onclick="payNow()">Pay Now</button>
+    </div>
+  </section>
+
+  <!-- --- Contact Section --- -->
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <p>📍 123 Barber Street, Cityville</p>
+    <p>📞 +123-456-7890</p>
+
+    <h2>Find Us on the Map</h2>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.000140832783!2d-122.41941518468126!3d37.77492977975996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085809c2f4d3889%3A0xb7b736e3c4a77d14!2sSan%20Francisco%20City!5e0!3m2!1sen!2sus!4v1611234567890"
+      width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+    </iframe>
+
+    <h2>Send a Message</h2>
+    <form id="contactForm">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <!-- --- Footer --- -->
+  <footer>
+    <p>&copy; 2025 Fresh Cuts. All rights reserved.</p>
+  </footer>
+
+  <!-- --- JavaScript --- -->
+  <script>
+    function payNow() {
+      alert("Payment Successful! Thank you for choosing Fresh Cuts.");
+    }
+
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      alert("Thank you for contacting us! We'll get back to you soon.");
+      this.reset();
+    });
+  </script>
+
+</body>
+</html>
